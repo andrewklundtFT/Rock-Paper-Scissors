@@ -18,3 +18,9 @@ function playRound(playerSelection, computerSelection) {
     }
     return null;
 }
+
+function playGame() {
+    for (let i = 0; i < 5; i++) {        
+    alert(playRound(prompt("RPS?"), getComputerChoice()));
+    }
+}

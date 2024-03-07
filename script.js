@@ -22,9 +22,24 @@ function playRound(playerSelection, computerSelection) {
 //const playerSelection = "paper";
 //const computerSelection = getComputerChoice();
 //console.log(playRound(playerSelection, computerSelection));
+//playerSelection = "pAPer";
+//console.log(playRound(playerSelection, computerSelection));
+//playerSelection = "PAPER";
+//console.log(playRound(playerSelection, computerSelection));
 
 function playGame() {
-    for (let i = 0; i < 5; i++) {        
-    alert(playRound(prompt("RPS?"), getComputerChoice()));
+    let computerScore = 0;
+    let playerScore = 0;
+    for (let i = 1; i < 6; i++) {
+        let roundResult = playRound(prompt("Game " + i + ": Enter Rock, Paper, or Scissors"), getComputerChoice());
+        if (roundResult.substring(0, 5) === "You w") {
+            playerScore++;
+        } else if (roundResult.substring(0, 5) === "You l") {
+            computerScore++;
+        }
+        alert(roundResult);
     }
+    alert("Computer " + computerScore + ", Human " + playerScore);
 }
+
+playGame();

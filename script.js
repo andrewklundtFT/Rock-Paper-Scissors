@@ -19,6 +19,10 @@ function playRound(playerSelection, computerSelection) {
     return null;
 }
 
+//const playerSelection = "paper";
+//const computerSelection = getComputerChoice();
+//console.log(playRound(playerSelection, computerSelection));
+
 function playGame() {
     for (let i = 0; i < 5; i++) {        
     alert(playRound(prompt("RPS?"), getComputerChoice()));
